@@ -43,11 +43,14 @@
             </div>
         </header>
         <!-- Products-->
-        <section class="page-section" id="products">
+        <section class="page-section bg-light" id="products">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Our products</h2>
                     <h3 class="section-subheading text-muted">Take part in the launch of our brand new fragrance made in France with the participation of special guests - scientific experts.</h3>
+                </div>
+                <div class="row">
+                    <div id="voila-app"></div>
                 </div>
             </div>
         </section>
@@ -125,5 +128,19 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script type="text/javascript">
+            // Replace those values by those available in your administration interface
+            const VOILA_EVENT_ID = '2JwrahFs74BHbHPTkuxpuVZM6UA';
+            const VOILA_SESSION_ID= '2JwzkqxxtBXgZdaJguFHwez0RYQ';
+            (function (v, o, i, l, a, J, S) {
+              if (!o.getElementById('voila-library')) {
+                (v[a] = v[a]), (J = o.createElement(i)), (S = o.getElementsByTagName(i)[0]);
+                J.async = 1;
+                J.src = l;
+                J.id = 'voila-library';
+                S.parentNode.insertBefore(J, S);
+              }
+            })(window, document, 'script', 'https://developer-dev.voila.events/lib/v1/voila.js?EVENT_ID=' + VOILA_EVENT_ID + '&SESSION_ID=' + VOILA_SESSION_ID, 'voila');
+        </script>      
     </body>
 </html>
